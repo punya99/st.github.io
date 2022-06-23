@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} multistrongply\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://multistrongply.com/$1 [R,L]
+
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^multistrongply.com [NC]
+RewriteRule ^(.*)$ https://www.multistrongply.com/$1 [R=301,NC]
+RewriteRule ^index.html$ https://www.multistrongply.com/ [R=301,L]
